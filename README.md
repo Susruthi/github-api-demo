@@ -1,9 +1,9 @@
 # github-api-demo
-Open Advanced REST Client
-Url : https://api.github.com/users/ankireddy501
-Http Method : GET
-Headers : User-Agent:Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
-Response :
+1.Open Advanced REST Client
+2.Url : https://api.github.com/users/ankireddy501
+3.Http Method : GET
+4.Headers : User-Agent:Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
+Response :'''
 ```json
 {
   "login": "ankireddy501",
