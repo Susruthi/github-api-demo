@@ -4,6 +4,7 @@ Url : https://api.github.com/users/ankireddy501
 Http Method : GET
 Headers : User-Agent:Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
 Response :
+```json
 {
   "login": "ankireddy501",
   "id": 7135007,
@@ -36,3 +37,4 @@ Response :
   "created_at": "2014-04-02T05:36:08Z",
   "updated_at": "2017-06-08T18:11:29Z"
 }
+```
