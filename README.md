@@ -130,4 +130,39 @@ curl -X GET https://api.github.com
   }
 }
 ```
+### curl -X GET https://api.github.com/users/ankireddy501
+``` json
+{
+  "login": "ankireddy501",
+  "id": 7135007,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/7135007?v=3",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/ankireddy501",
+  "html_url": "https://github.com/ankireddy501",
+  "followers_url": "https://api.github.com/users/ankireddy501/followers",
+  "following_url": "https://api.github.com/users/ankireddy501/following{/other_user}",
+  "gists_url": "https://api.github.com/users/ankireddy501/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/ankireddy501/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/ankireddy501/subscriptions",
+  "organizations_url": "https://api.github.com/users/ankireddy501/orgs",
+  "repos_url": "https://api.github.com/users/ankireddy501/repos",
+  "events_url": "https://api.github.com/users/ankireddy501/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/ankireddy501/received_events",
+  "type": "User",
+  "site_admin": false,
+  "name": "Ankireddy ",
+  "company": null,
+  "blog": "",
+  "location": "chennai",
+  "email": null,
+  "hireable": null,
+  "bio": null,
+  "public_repos": 19,
+  "public_gists": 0,
+  "followers": 5,
+  "following": 1,
+  "created_at": "2014-04-02T05:36:08Z",
+  "updated_at": "2017-06-09T12:53:37Z"
+}
+```
 https://blogs.infosupport.com/accessing-githubs-rest-api-with-curl/
