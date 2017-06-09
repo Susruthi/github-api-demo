@@ -39,7 +39,7 @@ Response :'''
 }
 ```
 #### curl -X GET https://api.github.com
-'''
+
 ```json
 curl -X GET https://api.github.com
 {
@@ -76,3 +76,58 @@ curl -X GET https://api.github.com
   "user_search_url": "https://api.github.com/search/users?q={query}{&page,per_page,sort,order}"
 }
 ```
+###curl -X GET https://api.github.com/gists/starred
+```json
+{
+  "message": "Requires authentication",
+  "documentation_url": "https://developer.github.com/v3/#authentication"
+}
+```
+### curl -X GET -u ankireddy501:******* https://api.github.com/user
+```json
+{
+  "login": "ankireddy501",
+  "id": 7135007,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/7135007?v=3",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/ankireddy501",
+  "html_url": "https://github.com/ankireddy501",
+  "followers_url": "https://api.github.com/users/ankireddy501/followers",
+  "following_url": "https://api.github.com/users/ankireddy501/following{/other_user}",
+  "gists_url": "https://api.github.com/users/ankireddy501/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/ankireddy501/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/ankireddy501/subscriptions",
+  "organizations_url": "https://api.github.com/users/ankireddy501/orgs",
+  "repos_url": "https://api.github.com/users/ankireddy501/repos",
+  "events_url": "https://api.github.com/users/ankireddy501/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/ankireddy501/received_events",
+  "type": "User",
+  "site_admin": false,
+  "name": "Ankireddy ",
+  "company": null,
+  "blog": "",
+  "location": "chennai",
+  "email": "reddy.501@gmail.com",
+  "hireable": null,
+  "bio": null,
+  "public_repos": 19,
+  "public_gists": 0,
+  "followers": 5,
+  "following": 1,
+  "created_at": "2014-04-02T05:36:08Z",
+  "updated_at": "2017-06-09T12:53:37Z",
+  "private_gists": 0,
+  "total_private_repos": 5,
+  "owned_private_repos": 5,
+  "disk_usage": 193535,
+  "collaborators": 2,
+  "two_factor_authentication": false,
+  "plan": {
+    "name": "free",
+    "space": 976562499,
+    "collaborators": 0,
+    "private_repos": 0
+  }
+}
+```
+https://blogs.infosupport.com/accessing-githubs-rest-api-with-curl/
