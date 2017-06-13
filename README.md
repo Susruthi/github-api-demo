@@ -165,4 +165,52 @@ curl -X GET https://api.github.com
   "updated_at": "2017-06-09T12:53:37Z"
 }
 ```
+ ### GET https://api.github.com/user
+ ```json
+ {
+"login": "Susruthi",
+"id": 29282131,
+"avatar_url": "https://avatars3.githubusercontent.com/u/29282131?v=3",
+"gravatar_id": "",
+"url": "https://api.github.com/users/Susruthi",
+"html_url": "https://github.com/Susruthi",
+"followers_url": "https://api.github.com/users/Susruthi/followers",
+"following_url": "https://api.github.com/users/Susruthi/following{/other_user}",
+"gists_url": "https://api.github.com/users/Susruthi/gists{/gist_id}",
+"starred_url": "https://api.github.com/users/Susruthi/starred{/owner}{/repo}",
+"subscriptions_url": "https://api.github.com/users/Susruthi/subscriptions",
+"organizations_url": "https://api.github.com/users/Susruthi/orgs",
+"repos_url": "https://api.github.com/users/Susruthi/repos",
+"events_url": "https://api.github.com/users/Susruthi/events{/privacy}",
+"received_events_url": "https://api.github.com/users/Susruthi/received_events",
+"type": "User",
+"site_admin": false,
+"name": "Susruthi",
+"company": null,
+"blog": "",
+"location": "Chennai",
+"email": "alaparthi.susruthi@gmail.com",
+"hireable": null,
+"bio": null,
+"public_repos": 3,
+"public_gists": 0,
+"followers": 0,
+"following": 0,
+"created_at": "2017-06-08T15:00:05Z",
+"updated_at": "2017-06-12T11:40:54Z",
+"private_gists": 0,
+"total_private_repos": 0,
+"owned_private_repos": 0,
+"disk_usage": 0,
+"collaborators": 0,
+"two_factor_authentication": false,
+"plan": {
+        "name": "free",
+        "space": 976562499,
+        "collaborators": 0,
+        "private_repos": 0
+    }
+}
+```
+
 https://blogs.infosupport.com/accessing-githubs-rest-api-with-curl/
