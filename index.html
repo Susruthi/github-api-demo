@@ -31,10 +31,11 @@ $(function(){
     var username = $('#ghusername').val();
     var requri   = 'https://api.github.com/users/'+username;
     var repouri  = 'https://api.github.com/users/'+username+'/repos';
-    
+    //xhr.setRequestHeader('Authorization', '');
     requestJSON(requri, function(json) {
       if(json.message == "Not Found" || username == '') {
         $('#ghapidata').html("<h2>No User Info Found</h2>");
+		
       }
       
       else {
@@ -49,14 +50,16 @@ $(function(){
         var reposnum     = json.public_repos;
 		var sub_count= json.subscriptions;
 		var location    = json.location;
-		var email	= json.email;
+		var email_id	=    json.email;
         
         if(fullname == undefined) { fullname = username; }
         
         var outhtml = '<h2>'+fullname+' <span class="smallname">(@<a href="'+profileurl+'" target="_blank">'+username+'</a>)</span></h2>';
         outhtml = outhtml + '<div class="ghcontent"><div class="avi"><a href="'+profileurl+'" target="_blank"><img src="'+aviurl+'" width="80" height="80" alt="'+username+'"></a></div>';
-        outhtml = outhtml + '<p>Followers: '+followersnum+' - Following: '
-						+followingnum+'<br>Repos: '+reposnum+'<br>Location :'+location+'</p></div>';
+        outhtml = outhtml + '<p>Followers: '+followersnum+' - Following: '+followingnum+
+							'<br>Repos	: ' +reposnum+ 
+							'<br>Location : '+location+ 
+							'<br>Email-ID : '+email_id+'</p></div>';
         outhtml = outhtml + '<div class="repolist clearfix">';
         
         var repositories;
@@ -83,6 +86,9 @@ $(function(){
   function requestJSON(url, callback) {
     $.ajax({
       url: url,
+	  headers : {
+		'Authorization' : 'Basic YWxhcGFydGhpLnN1c3J1dGhpQGdtYWlsLmNvbTo5NzMzc0BOMzY=',
+		},
       complete: function(xhr) {
         callback.call(null, xhr.responseJSON);
       }
@@ -92,3 +98,4 @@ $(function(){
 </script>
 </body>
 </html>
+
