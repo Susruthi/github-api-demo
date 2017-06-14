@@ -9,12 +9,19 @@
   <link rel="icon" href="http://d15dxvojnvxp1x.cloudfront.net/assets/favicon.ico">
   <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
   <div id="w">
     <h1>Simple Github API Webapp</h1>
-    <p>Enter a single Github username below and click the button to display profile info via JSON.</p>
+    <p>Enter a Github username below </p>
     
     <input type="text" name="ghusername" id="ghusername" placeholder="Github username...">
     
@@ -51,7 +58,7 @@ $(function(){
 		var sub_count= json.subscriptions;
 		var location    = json.location;
 		var email_id	=    json.email;
-        
+		
         if(fullname == undefined) { fullname = username; }
         
         var outhtml = '<h2>'+fullname+' <span class="smallname">(@<a href="'+profileurl+'" target="_blank">'+username+'</a>)</span></h2>';
@@ -72,8 +79,10 @@ $(function(){
           if(repositories.length == 0) { outhtml = outhtml + '<p>No repos!</p></div>'; }
           else {
             outhtml = outhtml + '<p><strong>Repos List:</strong></p> <ul>';
+			outhtml = outhtml +'<b><div class="container"><div class="row"><div class="col-md-2">Repo_Name</div><div class="col-md-2">Forks</div></div></div></b>';
             $.each(repositories, function(index) {
-              outhtml = outhtml + '<li><a href="'+repositories[index].html_url+'" target="_blank">'+repositories[index].name + '</a></li>';
+			
+			outhtml = outhtml +'<div class="container"><div class="row"><div class="col-md-2">'+repositories[index].name + '</div><div class="col-md-2">'+repositories[index].forks+'</div></div></div>';
             });
             outhtml = outhtml + '</ul></div>'; 
           }
