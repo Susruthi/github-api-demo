@@ -16,6 +16,7 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -61,12 +62,12 @@ $(function(){
 		
         if(fullname == undefined) { fullname = username; }
         
-        var outhtml = '<h2>'+fullname+' <span class="smallname">(@<a href="'+profileurl+'" target="_blank">'+username+'</a>)</span></h2>';
+        var outhtml = '<h3><p style="font-family:times new roman">'+fullname+' <span class="smallname">(@<a href="'+profileurl+'" target="_blank">'+username+'</a>)</span></p></h3>';
         outhtml = outhtml + '<div class="ghcontent"><div class="avi"><a href="'+profileurl+'" target="_blank"><img src="'+aviurl+'" width="80" height="80" alt="'+username+'"></a></div>';
-        outhtml = outhtml + '<p style="font-family:times new roman"><font size="4"><b>Followers:</b> '+followersnum+' - <b> Following: </b>'+followingnum+
+        outhtml = outhtml + '<p style="font-family:times new roman"><font size="4"><b>Followers:</b> '+followersnum+' <b><br> Following: </b>'+followingnum+
 							'<br> <b>Repos	: </b>' +reposnum+ 
-							'<br><b>Location : </b>'+location+ 
-							'<br><b>Email-ID : </b>'+email_id+'</font></p></div>';
+							'<br><span class="glyphicon glyphicon-map-marker">: </span>  '+location+ 
+							'<br><span class="glyphicon glyphicon-envelope">:  </span>  '+email_id+'</font></p></div>';
         outhtml = outhtml + '<div class="repolist clearfix">';
         
         var repositories;
@@ -96,7 +97,7 @@ $(function(){
     $.ajax({
       url: url,
 	  headers : {
-		'Authorization' : 'Basic YWxhcGFydGhpLnN1c3J1dGhpQGdtYWlsLmNvbTo5NzMzc0BOMzY=',
+		'Authorization' : 'Basic YWxhcGFydGhpLnN1c3J1dGhpQGdtYWlsLmNvbTpzdXNydXRoSTM=',
 		},
       complete: function(xhr) {
         callback.call(null, xhr.responseJSON);
