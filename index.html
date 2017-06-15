@@ -20,8 +20,8 @@
 
 <body>
   <div id="w">
-    <h1>Simple Github API Webapp</h1>
-    <p>Enter a Github username below </p>
+    <h2><p style="font-family:times new roman">Simple Github API Webapp</p></h2>
+    <p style="font-family:times new roman">Enter a Github username below </p>
     
     <input type="text" name="ghusername" id="ghusername" placeholder="Github username...">
     
@@ -63,10 +63,10 @@ $(function(){
         
         var outhtml = '<h2>'+fullname+' <span class="smallname">(@<a href="'+profileurl+'" target="_blank">'+username+'</a>)</span></h2>';
         outhtml = outhtml + '<div class="ghcontent"><div class="avi"><a href="'+profileurl+'" target="_blank"><img src="'+aviurl+'" width="80" height="80" alt="'+username+'"></a></div>';
-        outhtml = outhtml + '<p>Followers: '+followersnum+' - Following: '+followingnum+
-							'<br>Repos	: ' +reposnum+ 
-							'<br>Location : '+location+ 
-							'<br>Email-ID : '+email_id+'</p></div>';
+        outhtml = outhtml + '<p style="font-family:times new roman"><font size="4"><b>Followers:</b> '+followersnum+' - <b> Following: </b>'+followingnum+
+							'<br> <b>Repos	: </b>' +reposnum+ 
+							'<br><b>Location : </b>'+location+ 
+							'<br><b>Email-ID : </b>'+email_id+'</font></p></div>';
         outhtml = outhtml + '<div class="repolist clearfix">';
         
         var repositories;
@@ -78,11 +78,11 @@ $(function(){
         function outputPageContent() {
           if(repositories.length == 0) { outhtml = outhtml + '<p>No repos!</p></div>'; }
           else {
-            outhtml = outhtml + '<p><strong>Repos List:</strong></p> <ul>';
-			outhtml = outhtml +'<b><div class="container"><div class="row"><div class="col-md-2">Repo_Name</div><div class="col-md-2">Forks</div></div></div></b>';
+            outhtml = outhtml + '<p style="font-family:times new roman"><strong><u>Repos List</u>:</strong></p> <ul>';
+			outhtml = outhtml +'<b><div class="container" style="font-family:times new roman"><div class="row"><div class="col-md-2">Repo_Name</div><div class="col-md-2">Language</div><div class="col-md-2">Watchers</div><div class="col-md-2">Forks</div></div></div></b>';
             $.each(repositories, function(index) {
 			
-			outhtml = outhtml +'<div class="container"><div class="row"><div class="col-md-2">'+repositories[index].name + '</div><div class="col-md-2">'+repositories[index].forks+'</div></div></div>';
+			outhtml = outhtml +'<div class="container" style="font-family:times new roman"><div class="row"><div class="col-md-2"><a href="'+repositories[index].html_url+'" target="_blank">'+repositories[index].name+'</a></div><div class="col-md-2">'+repositories[index].language+'</div><div class="col-md-2">'+repositories[index].watchers_count+'</div><div class="col-md-2">'+repositories[index].forks_count+'</div></div></div>';
             });
             outhtml = outhtml + '</ul></div>'; 
           }
@@ -107,4 +107,3 @@ $(function(){
 </script>
 </body>
 </html>
-
